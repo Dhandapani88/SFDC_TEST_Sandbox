@@ -1,0 +1,1 @@
+ Download selenium server.jar from the SeleniumHQ website <http://selenium.googlecode.com/files/selenium-server-standalone-2.0rc2.jar> and place here if one not exists.

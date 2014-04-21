@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir=".." default="runtests" name="TestAutomation">
+	<property name="bin.dir" value="${basedir}/bin" />
+	<property name="lib.dir" value="${basedir}/lib" />
+	<property name="src.dir" value="${basedir}/src" />
+	<property name="qmetry.schedule.file" value="" />
+	<property file="scripts/seleniumtestrunner.properties"/> 
+	<property environment="env"/>
+    <property name="SeleniumAutomationFramework.location" value="${basedir}/../SeleniumAutomationFramework"/>
+	<available file="${SeleniumAutomationFramework.location}" type="dir" property="framework.script.present"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+	  <tstamp>
+	      <format property="run.time" pattern="dd_MMM_yyyy_hh_mm_aa" />
+	  </tstamp>
+
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: for-test                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="for-test">
+            <echo>${run.time}</echo>
+    	 <echo>${env.test.results.dir}</echo>
+    </target>
+	<property name="name" location=""/>
+
+	<path id="seleniumautomation.classpath">
+		<pathelement path="${lib.dir}"/>
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="${basedir}/server">
+			<include name="*.jar" />
+			<include name="**/*.jar"/>
+		</fileset>
+		
+	</path>
+	
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="${bin.dir}">
+            <fileset dir="${src.dir}">
+                <exclude name="**/*.ucls"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    	<delete file="${lib.dir}/selenium-test.jar" failonerror="false"></delete>
+    </target>
+    <target depends="build-project" name="build"/>
+       <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="false" destdir="${bin.dir}" source="${source}" target="${target}">
+            <src path="${src.dir}"/>
+            <classpath refid="seleniumautomation.classpath"/>
+        </javac>
+    </target>
+
+	<!-- ================================= 
+          target: make-jar              
+         ================================= -->
+    <target name="make-jar" depends="clean, build-project" description="Jar test classes">
+    	 <jar destfile="${lib.dir}/selenium-test.jar" basedir="${bin.dir}"/>
+    </target>
+	<target name="gendoc">
+		  <javadoc packagenames="com.**.test.*"
+		           sourcepath="${src.dir}"
+		           destdir="docs/tests"
+           			verbose="true"
+		           author="true"
+		           version="true"
+		           use="true"
+		           windowtitle="Test Automation API">
+		    <doctitle><![CDATA[<h1>Test Automation API</h1>]]></doctitle>
+		    <bottom><![CDATA[<i>Copyright &#169; 2000 Infostretch Corp. All Rights Reserved.</i>]]></bottom>
+		 
+		  </javadoc>
+	</target>
+	<target name="runtests" depends="make-jar">
+		<taskdef resource="testngtasks" classpathref="seleniumautomation.classpath"/>
+		<testng classpathref="seleniumautomation.classpath" outputDir="${test.results.dir}/${run.time}" useDefaultListeners="false" 
+            listeners="org.uncommons.reportng.HTMLReporter,com.infostretch.automation.testng.MethodOrderInterceptor">
+			<!-- listeners="org.uncommons.reportng.HTMLReporter,com.infostretch.automation.testng.MethodOrderInterceptor,com.infostretch.automation.integration.qmetry.testng.QmetrySchedulerFilter" -->
+			<xmlfileset dir="${test.conf.dir}" includes="${testng.suite.file}" />
+			<jvmarg value="-ea"/>
+			<sysproperty key="org.uncommons.reportng.title" value="${testng.report.title}"/>
+			<sysproperty key="org.uncommons.reportng.escape-output" value="false"/>
+			<sysproperty key="outputDir" value="${test.results.dir}/${run.time}"/>
+			<sysproperty key="test.results.dir" value="${test.results.dir}/${run.time}/html"/>
+			<sysproperty key="selenium.screenshots.dir" value="${test.results.dir}/${run.time}/img"/>
+			<sysproperty key="selenium.screenshots.relative.path" value="../img"/>
+			<sysproperty key="qmetry.schedule.file" value="${qmetry.schedule.file}"/>
+			<sysproperty key="log4j.configuration" value="file:///${lib.dir}/log4j.properties"/>
+
+		</testng>
+	
+	</target>
+</project>

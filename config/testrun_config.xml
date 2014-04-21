@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Test Automation" verbose="0" parallel="tests">
+	<test name="Test on Internet Explorer" >	
+		<packages>
+			<package name="com.sample.automation.tests"/>
+		</packages>
+		
+	</test>	
+</suite>
