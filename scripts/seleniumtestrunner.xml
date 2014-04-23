@@ -81,8 +81,8 @@
 	</target>
 	<target name="runtests" depends="make-jar">
 		<taskdef resource="testngtasks" classpathref="seleniumautomation.classpath"/>
-		<testng classpathref="seleniumautomation.classpath" outputDir="${test.results.dir}/${run.time}" useDefaultListeners="false" 
-            listeners="org.uncommons.reportng.HTMLReporter,com.infostretch.automation.testng.MethodOrderInterceptor">
+		<testng classpathref="seleniumautomation.classpath" outputDir="${test.results.dir}/${run.time}" useDefaultListeners="true">
+			<!--listeners="org.uncommons.reportng.HTMLReporter,com.infostretch.automation.testng.MethodOrderInterceptor" -->
 			<!-- listeners="org.uncommons.reportng.HTMLReporter,com.infostretch.automation.testng.MethodOrderInterceptor,com.infostretch.automation.integration.qmetry.testng.QmetrySchedulerFilter" -->
 			<xmlfileset dir="${test.conf.dir}" includes="${testng.suite.file}" />
 			<jvmarg value="-ea"/>
