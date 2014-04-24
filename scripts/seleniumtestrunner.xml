@@ -81,9 +81,9 @@
 	</target>
 	<target name="runtests" depends="make-jar">
 		<taskdef resource="testngtasks" classpathref="seleniumautomation.classpath"/>
-		<testng classpathref="seleniumautomation.classpath" outputDir="${test.results.dir}/${run.time}" useDefaultListeners="true">
-			<!--listeners="org.uncommons.reportng.HTMLReporter,com.infostretch.automation.testng.MethodOrderInterceptor" -->
-			<!-- listeners="org.uncommons.reportng.HTMLReporter,com.infostretch.automation.testng.MethodOrderInterceptor,com.infostretch.automation.integration.qmetry.testng.QmetrySchedulerFilter" -->
+		<!--testng classpathref="seleniumautomation.classpath" outputDir="${test.results.dir}/${run.time}" useDefaultListeners="true"
+			listeners="org.uncommons.reportng.HTMLReporter">
+			 listeners="org.uncommons.reportng.HTMLReporter,com.infostretch.automation.testng.MethodOrderInterceptor,com.infostretch.automation.integration.qmetry.testng.QmetrySchedulerFilter" 
 			<xmlfileset dir="${test.conf.dir}" includes="${testng.suite.file}" />
 			<jvmarg value="-ea"/>
 			<sysproperty key="org.uncommons.reportng.title" value="${testng.report.title}"/>
@@ -95,7 +95,23 @@
 			<sysproperty key="qmetry.schedule.file" value="${qmetry.schedule.file}"/>
 			<sysproperty key="log4j.configuration" value="file:///${lib.dir}/log4j.properties"/>
 
-		</testng>
+		</testng> -->
 	
+		<testng classpathref="seleniumautomation.classpath" outputDir="${test.results.dir}" useDefaultListeners="true"
+					listeners="org.uncommons.reportng.HTMLReporter">
+					<!-- listeners="org.uncommons.reportng.HTMLReporter,com.infostretch.automation.testng.MethodOrderInterceptor,com.infostretch.automation.integration.qmetry.testng.QmetrySchedulerFilter" -->
+					<xmlfileset dir="${test.conf.dir}" includes="${testng.suite.file}" />
+					<jvmarg value="-ea"/>
+					<sysproperty key="org.uncommons.reportng.title" value="${testng.report.title}"/>
+					<sysproperty key="org.uncommons.reportng.escape-output" value="false"/>
+					<sysproperty key="outputDir" value="${test.results.dir}"/>
+					<sysproperty key="test.results.dir" value="${test.results.dir}/html"/>
+					<sysproperty key="selenium.screenshots.dir" value="${test.results.dir}/img"/>
+					<sysproperty key="selenium.screenshots.relative.path" value="../img"/>
+					<sysproperty key="qmetry.schedule.file" value="${qmetry.schedule.file}"/>
+					<sysproperty key="log4j.configuration" value="file:///${lib.dir}/log4j.properties"/>
+
+				</testng>
+		
 	</target>
 </project>
