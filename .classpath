@@ -12,10 +12,10 @@
 	<classpathentry kind="lib" path="lib/lib/ireportng-1.1.31.jar"/>
 	<classpathentry kind="lib" path="lib/lib/log4j-1.2.14.jar"/>
 	<classpathentry kind="lib" path="lib/lib/log4testng.properties"/>
-	<classpathentry kind="lib" path="lib/lib/testng.jar"/>
 	<classpathentry kind="lib" path="lib/lib/velocity-dep-1.4.jar"/>
 	<classpathentry kind="lib" path="lib/lib/selenium/selenium-java-2.0b2.jar"/>
 	<classpathentry kind="lib" path="D:/Softwares/Selenium/lib/jxl.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7"/>
+	<classpathentry kind="lib" path="D:/Softwares/Selenium/lib/testng-6.8.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

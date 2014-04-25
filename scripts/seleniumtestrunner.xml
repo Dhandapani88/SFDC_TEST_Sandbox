@@ -98,7 +98,7 @@
 		</testng> -->
 	
 		<testng classpathref="seleniumautomation.classpath" outputDir="${test.results.dir}" useDefaultListeners="true"
-					listeners="org.uncommons.reportng.HTMLReporter">
+					listeners="org.uncommons.reportng.HTMLReporter, org.testng.reporters.XMLReporter">
 					<!-- listeners="org.uncommons.reportng.HTMLReporter,com.infostretch.automation.testng.MethodOrderInterceptor,com.infostretch.automation.integration.qmetry.testng.QmetrySchedulerFilter" -->
 					<xmlfileset dir="${test.conf.dir}" includes="${testng.suite.file}" />
 					<jvmarg value="-ea"/>
