@@ -13,6 +13,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerElement;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -74,13 +76,13 @@ public class SeleniumTestCase {
 	       System.setProperty("webdriver.ie.driver", "D:\\Softwares\\Selenium\\IEDriverServer_Win32_2.41.0\\IEDriverServer.exe");
 	        DesiredCapabilities capab = DesiredCapabilities.internetExplorer();
 
-	        //capab.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+	      //  capab.set(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 	        driver = new InternetExplorerDriver(capab);
 		 
 		 
         
         String baseUrl = "https://login.salesforce.com";
-    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
     driver.get(baseUrl+ "/");
     
     }
