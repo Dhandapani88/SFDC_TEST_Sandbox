@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" skipfailedinvocationCounts="false" verbose="0" name="Failed suite [Selenium Test Automation]" junit="false" parallel="tests" annotations="JDK" data-provider-thread-count="10">
+  <test name="Test on Internet Explorer(failed)" junit="false" parallel="tests" annotations="JDK">
+    <classes>
+      <class name="com.sample.automation.tests.SfdcLoginTc">
+        <methods>
+          <include name="Test1"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
