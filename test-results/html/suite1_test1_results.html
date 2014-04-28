@@ -12,7 +12,7 @@
 <body>
 <h1>Test on Internet Explorer</h1>
 <p>
-  Test duration: 87.719s
+  Test duration: 43.362s
    <br/><input type="checkbox" onclick="toggleAllResult(this)" value="result_p" checked="" id="top-filter" />
 <span class="pass-label">P</span>ass
 <input type="checkbox" onclick="toggleAllResult(this)" value="result_f" checked="" id="top-filter"/>
@@ -23,60 +23,10 @@
 
 
 
+
+
   <table class="resultsTable">
-    <tr><th colspan="100%" class="header failed">Failed Tests</th></tr>
-          <tr>
-        <td colspan="100%" class="group">			SfdcLoginTc
-	</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-          Test1
-      </td>
-
-  <td>
-    </td>
-  <td class="duration">
-    31.407s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"javed.nehal@gmail.com", "Welcome$123", "Javed Nehal"</span><br />
-    
-        
-
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b><span style="color:red">F </span>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;</b></a><br />
-    <div class="stackTrace" id="exception-0">
-              org.testng.Assert.fail(Assert.java:87)<br />
-              org.testng.Assert.failNotEquals(Assert.java:441)<br />
-              org.testng.Assert.assertTrue(Assert.java:35)<br />
-              org.testng.Assert.assertTrue(Assert.java:45)<br />
-              com.sample.automation.manager.SfdcManager.login(Unknown Source)<br />
-              com.sample.automation.tests.SfdcLoginTc.Test1(Unknown Source)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
-              org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:644)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:546)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:700)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1002)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)<br />
-              org.testng.TestRunner.runWorkers(TestRunner.java:908)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:617)<br />
-              org.testng.TestRunner.run(TestRunner.java:498)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:329)<br />
-              org.testng.SuiteRunner.access$000(SuiteRunner.java:31)<br />
-              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:355)<br />
-              org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:142)<br />
-              java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br />
-              java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br />
-              java.lang.Thread.run(Unknown Source)<br />
-                </div>
-      </td>
-</tr>
+    <tr><th colspan="100%" class="header passed">Passed Tests</th></tr>
           <tr>
         <td colspan="100%" class="group">			SfdcReportTC
 	</td>
@@ -90,75 +40,11 @@
   <td>
     </td>
   <td class="duration">
-    11.710s
+    14.267s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"javed.nehal@gmail.com", "Welcome$123", "Opportunity Stage Duration"</span><br />
-    
-        
-
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b><span style="color:red">F </span>org.openqa.selenium.ElementNotVisibleException: Cannot click on element (WARNING: The server did not provide any stacktrace information)<br/>
-System info: os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_51&apos;<br/>
-Driver info: driver.version: RemoteWebDriver</b></a><br />
-    <div class="stackTrace" id="exception-1">
-              sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
-              sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)<br />
-              sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)<br />
-              java.lang.reflect.Constructor.newInstance(Unknown Source)<br />
-              org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:131)<br />
-              org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:105)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:410)<br />
-              org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:197)<br />
-              org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:58)<br />
-              com.sample.automation.manager.SfdcManager.login1(Unknown Source)<br />
-              com.sample.automation.tests.SfdcReportTC.Test2(Unknown Source)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
-              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
-              java.lang.reflect.Method.invoke(Unknown Source)<br />
-              org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:644)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:546)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:700)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1002)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)<br />
-              org.testng.TestRunner.runWorkers(TestRunner.java:908)<br />
-              org.testng.TestRunner.privateRun(TestRunner.java:617)<br />
-              org.testng.TestRunner.run(TestRunner.java:498)<br />
-              org.testng.SuiteRunner.runTest(SuiteRunner.java:329)<br />
-              org.testng.SuiteRunner.access$000(SuiteRunner.java:31)<br />
-              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:355)<br />
-              org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:142)<br />
-              java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)<br />
-              java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)<br />
-              java.lang.Thread.run(Unknown Source)<br />
-                </div>
-      </td>
-</tr>
-      </table>
-
-
-  <table class="resultsTable">
-    <tr><th colspan="100%" class="header passed">Passed Tests</th></tr>
-          <tr>
-        <td colspan="100%" class="group">			SfdcProfileTest
-	</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-          Test3
-      </td>
-
-  <td>
-    </td>
-  <td class="duration">
-    23.323s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"javed.nehal@gmail.com", "Welcome$123", "Javed Nehal"</span><br />
+          <i>Method arguments: </i><span class="arguments">"javed.nehal@gmail.com", "Welcome$123", "Activities with User -Unfiled"</span><br />
     
         
 

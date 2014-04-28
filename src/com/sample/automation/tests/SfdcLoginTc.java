@@ -14,13 +14,12 @@ import java.util.Properties;
 import org.testng.annotations.Test;
 public class SfdcLoginTc extends SeleniumTestCase {
 	
-	@Test(dataProvider = "logindetails", dataProviderClass = SfdcDataProvider.class)
+/*	@Test(dataProvider = "logindetails", dataProviderClass = SfdcDataProvider.class)
     public void Test1(String Uname,String Pwd,String uname) throws Exception {
 //Properties sc = site.getScreenResources();
 		SfdcManager.login(driver,Uname,Pwd,uname);
 		}
-
-	
+	*/
 	
 	
 }

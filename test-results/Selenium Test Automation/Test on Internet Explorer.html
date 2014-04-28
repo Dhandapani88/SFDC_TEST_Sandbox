@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test on Internet Explorer</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Apr 25 19:07:36 IST 2014</td>
+<td>Started on:</td><td>Mon Apr 28 13:43:06 IST 2014</td>
 </tr>
-<tr><td>Total time:</td><td>88 seconds (88001 ms)</td>
+<tr><td>Total time:</td><td>43 seconds (43508 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,106 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Instance</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td width="30%"><b>Exception</b></td>
-</tr>
-<tr>
-<td title='com.sample.automation.tests.SfdcLoginTc.Test1()'><b>Test1</b><br>Test class:Test on Internet Explorer<br>Parameters: javed.nehal@gmail.com, Welcome$123, Javed Nehal</td>
-<td>com.sample.automation.tests.SfdcLoginTc@3ccccd19</td><td>31</td>
-<td><div><pre>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
-	at com.sample.automation.manager.SfdcManager.login(Unknown Source)
-	at com.sample.automation.tests.SfdcLoginTc.Test1(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1936699009", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1936699009'><pre>java.lang.AssertionError: expected:&lt;true&gt; but was:&lt;false&gt;
-	at org.testng.Assert.fail(Assert.java:87)
-	at org.testng.Assert.failNotEquals(Assert.java:441)
-	at org.testng.Assert.assertTrue(Assert.java:35)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at com.sample.automation.manager.SfdcManager.login(Unknown Source)
-	at com.sample.automation.tests.SfdcLoginTc.Test1(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:644)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:546)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:700)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1002)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
-	at org.testng.TestRunner.runWorkers(TestRunner.java:908)
-	at org.testng.TestRunner.privateRun(TestRunner.java:617)
-	at org.testng.TestRunner.run(TestRunner.java:498)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:31)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:355)
-	at org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:142)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
-</tr>
-<tr>
-<td title='com.sample.automation.tests.SfdcReportTC.Test2()'><b>Test2</b><br>Test class:Test on Internet Explorer<br>Parameters: javed.nehal@gmail.com, Welcome$123, Opportunity Stage Duration</td>
-<td>com.sample.automation.tests.SfdcReportTC@8986fb7</td><td>11</td>
-<td><div><pre>org.openqa.selenium.ElementNotVisibleException: Cannot click on element (WARNING: The server did not provide any stacktrace information)
-System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_51'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:131)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:105)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:197)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:58)
-	at com.sample.automation.manager.SfdcManager.login1(Unknown Source)
-	at com.sample.automation.tests.SfdcReportTC.Test2(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 21 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace203107581", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace203107581'><pre>org.openqa.selenium.ElementNotVisibleException: Cannot click on element (WARNING: The server did not provide any stacktrace information)
-System info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_51'
-Driver info: driver.version: RemoteWebDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:131)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:105)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:410)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:197)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:58)
-	at com.sample.automation.manager.SfdcManager.login1(Unknown Source)
-	at com.sample.automation.tests.SfdcReportTC.Test2(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:644)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:546)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:700)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1002)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
-	at org.testng.TestRunner.runWorkers(TestRunner.java:908)
-	at org.testng.TestRunner.privateRun(TestRunner.java:617)
-	at org.testng.TestRunner.run(TestRunner.java:498)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:31)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:355)
-	at org.testng.internal.thread.ThreadUtil$CountDownLatchedRunnable.run(ThreadUtil.java:142)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-</pre></div></td>
-</tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -175,8 +75,8 @@ Driver info: driver.version: RemoteWebDriver
 <td width="30%"><b>Exception</b></td>
 </tr>
 <tr>
-<td title='com.sample.automation.tests.SfdcProfileTest.Test3()'><b>Test3</b><br>Test class:Test on Internet Explorer<br>Parameters: javed.nehal@gmail.com, Welcome$123, Javed Nehal</td>
-<td>com.sample.automation.tests.SfdcProfileTest@f6f756e</td><td>23</td>
+<td title='com.sample.automation.tests.SfdcReportTC.Test2()'><b>Test2</b><br>Test class:Test on Internet Explorer<br>Parameters: javed.nehal@gmail.com, Welcome$123, Activities with User -Unfiled</td>
+<td>com.sample.automation.tests.SfdcReportTC@601404d1</td><td>14</td>
 <td></td>
 </tr>
 </table><p>

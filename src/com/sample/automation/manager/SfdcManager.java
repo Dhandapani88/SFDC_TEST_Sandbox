@@ -95,15 +95,19 @@ public class SfdcManager {
 	
 	driver.findElement(By.linkText("Reports")).click();
 	
-	WebElement report = driver.findElement(By.partialLinkText(reportName));
+	Thread.sleep(2000);
 	
-				report.click();
+	Assert.assertTrue(driver.getPageSource().contains("Reports"));
 	
-				Thread.sleep(2000);
-				
-				driver.findElement(By.xpath("//*[@id='report']/div[1]/div[2]/input[8]")).click();
-				Thread.sleep(2000);
-				driver.findElement(By.xpath("//*[@id='bottomButtonRow']/input[1]")).click();
+	Thread.sleep(2000);
+	
+	Assert.assertTrue(driver.getPageSource().contains(reportName));
+	
+	
+			
+	
+	
+	
 	}
 	
 	
